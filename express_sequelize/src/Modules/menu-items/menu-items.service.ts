@@ -79,7 +79,7 @@ export class MenuItemsService {
 
   async getMenuItems() {
     const items = await MenuItem.findAll({include: MenuItem});
-    console.log(items)
+    // console.log(items)
     return items;
   }
 }
