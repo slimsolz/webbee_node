@@ -1,3 +1,5 @@
+import MenuItem from "./entities/menu-item.entity";
+
 export class MenuItemsService {
 
   /* TODO: complete getMenuItems so that it returns a nested menu structure
@@ -76,6 +78,8 @@ export class MenuItemsService {
   */
 
   async getMenuItems() {
-    throw new Error('TODO in task 3');
+    const items = await MenuItem.findAll({include: MenuItem});
+    console.log(items)
+    return items;
   }
 }
